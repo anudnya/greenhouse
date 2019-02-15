@@ -16,10 +16,11 @@ pipeline {
                  "Junit": {
                  junit 'target/surefire-reports/*.xml'
 		   },
-             "Archive": {
-                 archiveArtifacts(artifacts: 'target/greenhouse-*.war', onlyIfSuccessful: true, fingerprint: true)
+                 "Archive": {
+                     archiveArtifacts(artifacts: 'target/greenhouse-*.war', onlyIfSuccessful: true, fingerprint: true)
                    }
                  )
                }
-        }
+           }
     }
+}
